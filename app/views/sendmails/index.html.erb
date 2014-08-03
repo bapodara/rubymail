@@ -1,0 +1,29 @@
+<h1>Listing sendmails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>Subject</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sendmails.each do |sendmail| %>
+      <tr>
+        <td><%= sendmail.to %></td>
+        <td><%= sendmail.subject %></td>
+        <td><%= sendmail.body %></td>
+        <td><%= link_to 'Show', sendmail %></td>
+        <td><%= link_to 'Edit', edit_sendmail_path(sendmail) %></td>
+        <td><%= link_to 'Destroy', sendmail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sendmail', new_sendmail_path %>
