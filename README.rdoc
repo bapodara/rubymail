@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was my first attemp to look into Ruby. This application was created in Ruby language. It exposes SMTP service as restful web service.
 
 Things you may want to cover:
 
